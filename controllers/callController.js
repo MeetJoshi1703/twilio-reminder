@@ -1,4 +1,3 @@
-// controllers/callController.js
 const fs = require("fs");
 const csv = require("csv-parser");
 const client = require("twilio")(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
@@ -70,9 +69,9 @@ exports.playMessage = (req, res) => {
 // const path = require("path");
 
 // // Replace with your actual Exotel credentials
-// const exotelSid = "consultanubhav2";
-// const exotelToken = "e43b2945474a9a31fbc6ef9e9ff9d7427a323f8b8146f89a";
-// const exophone = "07948518144"; // e.g., "02212345678"
+// const exotelSid = process.env.EXOTEL_SID;
+// const exotelToken = process.env.EXOTEL_TOKEN;
+// const exophone = process.env.EXOTEL_PHONE_NUMBER; 
 
 // exports.makeCalls = (req, res) => {
 //     const customers = [];
@@ -144,7 +143,6 @@ exports.playMessage = (req, res) => {
 //         });
 // };
 
-// // This endpoint is hit by Exotel when the call is connected
 // exports.playMessage = (req, res) => {
 //     const { name = "customer", dueAmount = "outstanding amount", dueDate = "due date" } = req.query;
 
